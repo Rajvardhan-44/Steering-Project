@@ -1,6 +1,6 @@
 # Steering Geometry Solver using MATLAB
 
-A MATLAB-based steering geometry solver developed for Formula Student vehicle design. The objective of this project is to predict realistic steering angles, tyre slip angles, and tyre forces during steady-state cornering by combining vehicle dynamics with the Pacejka '96 tyre model.
+It is a MATLAB-based steering geometry solver. The objective of this project is to predict realistic steering angles, tyre slip angles, and tyre forces during steady-state cornering by combining vehicle dynamics with the Pacejka '96 tyre model.
 
 > **Project Status:** 🚧 Ongoing Development
 
@@ -13,10 +13,10 @@ Conventional steering geometry calculations often rely on ideal Ackermann steeri
 This project aims to develop a more realistic steering geometry solver that:
 
 - Uses the Pacejka '96 Magic Formula tyre model for tyre force prediction.
-- Simulates steady-state cornering of a four-wheel vehicle.
+- Simulates steady-state cornering of a four-wheeler.
 - Predicts individual wheel slip angles.
 - Calculates inner and outer steering angles.
-- Incorporates aerodynamic downforce and drag.
-- Moves beyond ideal 100% Ackermann assumptions.
+- Incorporates aerodynamic downforce and drag and their effects.
+- Moves beyond ideal 100% Ackermann assumptions and bicycle model.
 
-The long-term goal is to provide a steering design tool that can be used during Formula Student vehicle development without relying solely on commercial software.
+The long-term goal is to provide a steering design tool that can be used for vehicle development and to get maximum from tyres.
