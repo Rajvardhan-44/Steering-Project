@@ -1,4 +1,4 @@
-function Fy = Pacejka96(alpha,Fz,gamma,tyre)
+function Fy = Pacejka96(alpha, Fz, gamma, tyre)
 
 %-------------------------------------------------------------
 % Pacejka '96 Pure Lateral Force Model
