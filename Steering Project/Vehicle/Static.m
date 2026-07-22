@@ -1,9 +1,9 @@
-function static = Static()
+function static = Static(car)
 
-static.Wf = wd*m*g;    % Front axle static load
-static.Wfe = Wf/2;     % Static Load on each front wheel
+Wf = car.wd*car.m*car.g;             % Front axle static load
+static.Wfe = Wf/2;                   % Static Load on each front wheel
 
-static.Wr = m*g - Wf;  % Rear axle static load
-static.Wre = Wr/2;     % Static Load on each rear wheel
+Wr = car.m*car.g - Wf;               % Rear axle static load
+static.Wre = Wr/2;                   % Static Load on each rear wheel
 
 end

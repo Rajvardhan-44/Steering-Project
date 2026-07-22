@@ -9,6 +9,9 @@ h = 150;              % CG height in mm
 l = 1574.8;           % wheelbase in mm
 t = 1219.2;           % track width in mm
 
+w = 205;              % tyre width in mm
+d = 406.4;            % tyre diameter in mm
+
 r = 550;              % rack length in mm
 
 % car.tr = 5;           % tightest radius car should take (in m)
@@ -41,6 +44,10 @@ car.rwb = 0.2;        % distance between downforce and CG (m)
 car.h = h/1000;
 car.l = l/1000;
 car.t = t/1000;
+
+car.w = w/1000;
+car.d = d/1000;
+
 car.r = r/1000;
 
 car.a = (1 - car.wd) * car.l;           % distance between front axle and CG
@@ -55,19 +62,19 @@ car.radius = [...
     8
     9
     10
-    % 12
-    % 14
-    % 16
-    % 18
-    % 20
-    % 25
-    % 30
-    % 40
-    % 50
-    % 70
-    % 100
-    % 150
-    % 200
+    12
+    14
+    16
+    18
+    20
+    25
+    30
+    40
+    50
+    70
+    100
+    150
+    200
     ];
 
 
