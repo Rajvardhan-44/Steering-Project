@@ -1,24 +1,26 @@
+%% Steering Geometry Solver
 clc;
 clear;
 close all;
 
 %% Make all project folders visible
-
 addpath(genpath(pwd));
 
-%% Tyre Data
+fprintf('=========================================\n\n');
+fprintf('   Steering Geometry Performance Solver\n\n');
+fprintf('=========================================\n\n');
 
+%% Load Vehicle & Tyre Data
 Front = FrontTyre();
 Rear  = RearTyre();
+car   = VehicleData();
 
-%% Vehicle Data
+%% Run Solver
+fprintf('Running Solver...\n\n');
 
-car = VehicleData();
+Result = Solver(car, Front, Rear);
 
-%% Maximum Speed + Slip Angles
+fprintf('\nSolver Finished Successfully.\n');
 
-Result = FindSpeed(car,Front,Rear);
-
-%% Verify Radius using Rear Slip Angles
-
-Angle = FindAngle(Result,car);
+%% Display Results
+Info(car, Result);
