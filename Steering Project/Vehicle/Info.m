@@ -20,8 +20,13 @@ delta_fo = abs(rad2deg([Result.delta_fo]'));
 
 %% Figure 1 : IC Locations
 figure('Name', 'IC vs R',...
-       'NumberTitle', 'off',...
-       'Color', 'w');
+       'NumberTitle', 'off');
+
+% ax = gca;
+% ax.Color = 'w';
+% ax.XColor = 'k';  ax.YColor = 'k';
+% ax.GridColor = 'k';
+% ax.Title.Color = 'k';
 
 hold on
 axis equal
@@ -107,7 +112,7 @@ CGx = 0;
 CGy = car.b;
 
 plot(CGx, CGy,...
-              'ko', 'MarkerFaceColor', 'k',...
+              'ko', 'MarkerFaceColor', 'w',...
               'MarkerSize', 6);
 
 text(CGx+0.05, CGy, 'CG');
@@ -125,11 +130,11 @@ for i = 1:length(Result)
     yArc = CGy - R*sin(thetaArc);
 
     plot(xArc, yArc, '--', 'Color', [0.80 0.80 0.80]);
-    text(ICx(i)-0.12, ICy(i),...
-                             sprintf('%gm', Radius(i)),...
-                            'FontSize', 8,...
-                            'HorizontalAlignment', 'right');
-
+    htext = text(ICx(i)-0.12, ICy(i),...
+                                     sprintf('%gm', Radius(i)),...
+                                    'FontSize', 8,...
+                                    'HorizontalAlignment', 'right');
+    htext.Clipping = 'on';
     
 
 end
@@ -137,7 +142,7 @@ end
 
 % IC Points
 plot(ICx, ICy,...
-              'ko', 'MarkerFaceColor', 'k',...
+              'ko', 'MarkerFaceColor', 'r',...
               'MarkerSize', 5);
 
 
@@ -148,12 +153,17 @@ plot(ICx, ICy,...
 
 %% Figure 2 : Vmax vs Radius
 figure('Name', 'Vmax vs R',...
-       'NumberTitle', 'off',...
-       'Color', 'w');
+       'NumberTitle', 'off');
+
+% ax = gca;
+% ax.Color = 'w';
+% ax.XColor = 'k';  ax.YColor = 'k';
+% ax.GridColor = 'k';
+% ax.Title.Color = 'k';
 
 plot(Radius, Vmax,...
-     '-k', 'LineWidth', 2,...
-     'MarkerFaceColor', 'k');
+     '-r', 'LineWidth', 2,...
+     'MarkerFaceColor', 'w');
 
 grid on
 box on
@@ -165,8 +175,13 @@ title('Maximum Speed vs Corner Radius')
 
 %% Figure 3 : Steering Angles
 figure('Name','delta vs R',...
-       'NumberTitle', 'off',...
-       'Color', 'w');
+       'NumberTitle', 'off');
+
+% ax = gca;
+% ax.Color = 'w';
+% ax.XColor = 'k';  ax.YColor = 'k';
+% ax.GridColor = 'k';
+% ax.Title.Color = 'k';
 
 hold on
 
@@ -182,7 +197,7 @@ grid on
 box on
 
 xlabel('Corner Radius (m)')
-ylabel('Steering Angle Magnitude (deg)')
+ylabel('Delta Angles (deg)')
 
 legend('| \delta_{fi} |',...
        '| \delta_{fo} |',...
