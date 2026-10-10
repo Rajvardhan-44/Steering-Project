@@ -27,7 +27,7 @@ tyre.pVY3 = -0.0641;
 tyre.pVY4 = -0.6978041;
 
 %% Model Limits
-tyre.alpha_limit = deg2rad(4);
+tyre.alpha_limit = deg2rad(1);
 
 % Because from this model we are not achieving maxima in Lateral force vs slip angle
 
